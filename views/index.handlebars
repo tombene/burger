@@ -1,0 +1,56 @@
+<h1 class="text-center">Eat Burgers</h1>
+<div class="row">
+
+	<div class="col-md-4 text-center">
+		<h2>Select A Burger To Devoure</h2>
+		<img src="/assets/img/Bun-Top.png" alt="bun top" class="buns">
+		<ul>
+			{{#each burgers}} {{#unless devoured}}
+			<li data-id="{{this.id}}" class="devoure-burger">
+				<div class="container">
+					<img src="/assets/img/slim-patty.png" alt="slim patty" class="slim-patty">
+					<div class="patty-text" style="background-color: yellow;">
+						{{this.id}}. {{this.burger_name}} {{!--
+						<button data-id="{{this.id}}" class="devoure-burger">Consume!</button> --}}
+					</div>
+				</div>
+			</li>
+			{{/unless}} {{/each}}
+		</ul>
+		<img src="/assets/img/bun-bottom-1.png" alt="bun bottom" class="buns">
+	</div>
+	<div class="col-md-4 text-center  create-burger">
+		<div class="container">
+
+			<img src="/assets/img/create-burger.png" alt="create burger">
+			<div class="create-burger-form">
+				<form class="new-burger">
+					<div class="form-group">
+						<label for="new-burger"></label>
+						<input type="text" name="name" id="burger-name" class="md-large" placeholder="Name your burger...">
+					</div>
+
+					<button type="submit" class="btn-warning">Add Burger</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 text-center">
+		<h2>Burgers You Have Eaten</h2>
+		<img src="/assets/img/Bun-Top.png" alt="bun top" class="buns">
+		<ul>
+			{{#each burgers}} {{#if devoured}}
+			<li data-id="{{this.id}}" class="delete-burger">
+				<div class="container">
+					<img src="/assets/img/slim-patty.png" alt="slim patty" class="slim-patty">
+					<div class="patty-text" style="background-color: red; color: white;">
+						{{this.id}}. {{this.burger_name}} {{!--
+						<button data-id="{{this.id}}" class="delete-burger">Delete!</button> --}}
+					</div>
+				</div>
+			</li>
+			{{/if}} {{/each}}
+		</ul>
+		<img src="/assets/img/bun-bottom-1.png" alt="bun bottom" class="buns">
+	</div>
+</div>

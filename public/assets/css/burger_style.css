@@ -1,0 +1,43 @@
+li {
+	list-style: none;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+h1 {
+	color: red;
+}
+
+.slim-patty {
+	width: 100%;
+	min-width: 50%;
+}
+
+.buns {
+	width: 90%;
+}
+
+.container {
+	position: relative;
+}
+
+.patty-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	/* color: white; */
+	border-radius: 25px;
+	width: 50%
+}
+.create-burger-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	color: white;
+}
