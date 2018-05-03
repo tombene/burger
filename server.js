@@ -24,9 +24,8 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-var routes = require("./controllers/burgers_controller.js");
+require("./controllers/burgers_controller.js")(app);
 
-app.use(routes);
 
 // Starts the server to begin listening
 // =============================================================
